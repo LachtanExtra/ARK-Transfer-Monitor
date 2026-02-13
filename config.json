@@ -1,0 +1,6 @@
+{
+    "ClusterFolder": "C:\\Path\\To\\ARK\\ShooterGame\\Saved\\clusters\\YourClusterID",
+    "BackupFolder": "C:\\Path\\To\\ARK_Backups\\TransferSafeguard",
+    "DaysToKeepBackups": 0,
+    "MaxBackupsPerID": 20
+}
