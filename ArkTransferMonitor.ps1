@@ -63,7 +63,9 @@ $Action = {
     $PreviousSize = if ($global:FileSizes.ContainsKey($FileName)) { $global:FileSizes[$FileName] } else { 0 }
     $global:FileSizes[$FileName] = $CurrentSize
     
-    if ($CurrentSize -gt $PreviousSize) {
+    # Ignore files that shrunk (download) & item/dino uploads
+    #TODO: Implement a config filter for dino & item uploads
+    if ($CurrentSize -gt $PreviousSize -and $CurrentSize -ge 500KB) {
         $MaxRetries = 10
         $RetryCount = 0
         $Copied = $false
